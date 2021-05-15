@@ -22,5 +22,66 @@
     line-height: 18px;
     letter-spacing: 0em;
     text-align: left;
-
+    margin-bottom: 24px;
 }
+
+.sd-border {
+    height: 224px;
+    width: 273px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    margin-bottom: 29px;
+}
+
+.sd-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.sd-image {
+    width: 126px;
+    height: 94px;
+}
+
+.mousepad-border {
+    height: 224px;
+    width: 273px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+.mousepad-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.mousepad-image {
+    width: 126px;
+    height: 94px;
+}
+
+.image-text {
+    font-family: Raleway;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0em;  
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 20%;
+}
+
+/* input {
+    opacity: 0;
+    visibility: hidden;
+  } */
