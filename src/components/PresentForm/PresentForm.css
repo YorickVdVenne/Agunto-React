@@ -3,36 +3,42 @@
     width: 90%;
 }
 
-.title {
+.present-title {
     font-family: Raleway, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
     font-style: normal;
     font-weight: 200;
     line-height: 35px;
     letter-spacing: 0em;
-    text-align: left;
+    text-align: center;
     margin: 0;
 }
 
-.text {
+.present-text {
     font-family: Raleway, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 15px;
     font-style: normal;
     font-weight: 300;
     line-height: 18px;
     letter-spacing: 0em;
-    text-align: left;
+    text-align: center;
     margin-bottom: 24px;
+
 }
 
-.sd-border {
-    height: 224px;
-    width: 273px;
+.sd-button {
+    border: 0;
+    padding: 0;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    background-color: white;
     margin-bottom: 29px;
+}
+
+.sd-wrapper {
+    height: 224px;
+    width: 273px;
+    background-color: white;
 }
 
 .sd-image-container {
@@ -47,12 +53,17 @@
     height: 94px;
 }
 
-.mousepad-border {
-    height: 224px;
-    width: 273px;
+.mousepad-button {
+    border: 0;
+    padding: 0;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.mousepad-wrapper {
+    height: 224px;
+    width: 273px;
     background-color: white;
 }
 
@@ -79,6 +90,17 @@
     display: flex;
     justify-content: center;
     height: 20%;
+}
+
+.present-notice {
+    font-family: Roboto;
+    font-size: 12px;
+    letter-spacing: 0em;
+    text-align: center;
+    width: 290px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* input {
