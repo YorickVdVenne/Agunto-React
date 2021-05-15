@@ -1,0 +1,13 @@
+.header {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+}
+
+.image {
+    width: 163px;
+    height: 145px;
+    position: relative;
+    float: right;
+    transform: translate(37px, -17px);
+}
