@@ -2,6 +2,7 @@
     position: fixed;
     height: 80px;
     width: 100%;
+    top: 0;
 }
 
 .image {

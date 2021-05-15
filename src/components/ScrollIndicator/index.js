@@ -1,4 +1,4 @@
-import styles from './ScrollIndicator.css'
+import './ScrollIndicator.css'
 
 export default function ScrollIndicator() {
     window.onscroll = () => changeProgressBar();
@@ -11,8 +11,8 @@ export default function ScrollIndicator() {
     }
 
     return (
-    <div class='progress-container'>
-        <div class="progress-bar" id="bar"></div>
+    <div className='progress-container'>
+        <div className="progress-bar" id="bar"></div>
     </div>
     )
 }
