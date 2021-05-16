@@ -1,11 +1,11 @@
-.header {
-    position: fixed;
-    height: 80px;
+.c-header {
     width: 100%;
+    height: 80px;
+    position: fixed;
     top: 0;
 }
 
-.image {
+.c-header__image {
     width: 163px;
     height: 145px;
     position: relative;

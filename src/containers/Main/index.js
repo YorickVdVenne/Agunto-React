@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './Main.css'
 
 import PresentForm from '../../components/PresentForm'
@@ -12,8 +12,10 @@ export default function Main() {
     const [userInfo, setUserInfo] = useState()
     const [orderedProduct, setOrderedProduct] = useState()
     const [proof, setProof] = useState()
-     
-    console.log(userInfo)
+
+    useEffect(() => {
+        setProof()
+    }, [])
 
     return (
         <div className="main">
@@ -23,7 +25,7 @@ export default function Main() {
                         ? proof
                             ? <SuccessPage />
                             : <UploadProofForm />
-                        : <OrderedProducts />
+                        : <OrderedProducts onChange={(value) => setOrderedProduct(value)}/>
                     : <UserInfoForm onChange={(value) => setUserInfo(value)}/>
                 : <PresentForm onChange={(value) => setPresent(value)}/>
             }

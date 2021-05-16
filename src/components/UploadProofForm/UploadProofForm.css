@@ -1,0 +1,101 @@
+.proof {
+    margin: 81px auto 0 auto;
+    width: 90%;
+}
+.proof-container {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.proof-title {
+    font-family: Raleway, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 0;
+}
+
+.proof-text {
+    font-family: Raleway, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 29px;
+    margin-top: 6px;
+
+}
+
+.upload-wrapper {
+    border-style: dashed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.upload-icon {
+    width: 29px;
+    height: 29px;
+    margin-left: 26px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+.upload-input {
+    display: none;
+}
+
+.upload-check {
+    width: 29px;
+    height: 29px;
+    margin-right: 17px;
+    opacity: 0;
+}
+.upload-check.active {
+    opacity: 1;
+}
+
+.finish-btn {
+    width: 100%;
+    height: 63px;
+    font-family: Raleway;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    background-color: #35E518;
+    border: none;
+    margin-bottom: 21px;
+    margin-top: 34px;
+}
+
+.finish-notice {
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 17.58px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 5px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.finish {
+
+}

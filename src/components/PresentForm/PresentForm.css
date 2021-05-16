@@ -1,104 +1,116 @@
-.present {
-    margin: 81px auto 0 auto;
-    width: 90%;
+.c-present {
+    width: 100%;
+    max-width: 1240px;
+    margin: 80px auto;
+    font-family: Raleway, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.present-title {
-    font-family: Raleway, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 200;
-    line-height: 35px;
-    letter-spacing: 0em;
-    text-align: center;
+.c-present-content {
+    padding: 0 30px;
+}
+
+.c-present-content__title {
+    margin: 5px 0;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 38px;
+}
+
+.c-present-content__text, .c-present-content__notice {
     margin: 0;
-}
-
-.present-text {
-    font-family: Raleway, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 15px;
-    font-style: normal;
+    font-size: 16px;
     font-weight: 300;
-    line-height: 18px;
-    letter-spacing: 0em;
-    text-align: center;
-    margin-bottom: 24px;
-
+    line-height: 26px;
 }
 
-.sd-button {
-    border: 0;
-    padding: 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 29px;
-}
-
-.sd-wrapper {
-    height: 224px;
-    width: 273px;
-    background-color: white;
-}
-
-.sd-image-container {
+.c-present-form {
+    padding: 15px 30px 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80%;
+    flex-direction: column;
 }
 
-.sd-image {
-    width: 126px;
-    height: 94px;
-}
-
-.mousepad-button {
-    border: 0;
+.c-present-form-btn {
     padding: 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    border: 10px solid #ffffff;
+    max-width: 500px;
+    margin: 15px 0;
 }
 
-.mousepad-wrapper {
-    height: 224px;
-    width: 273px;
-    background-color: white;
+.c-present-form-btn:hover, .c-present-form-btn:focus{
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border: 10px solid #35E618;
 }
 
-.mousepad-image-container {
+.c-present-form-btn-cnr {
+    padding: 40px 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 80%;
+    justify-content: center;
+    background-color: #ffffff;
 }
 
-.mousepad-image {
-    width: 126px;
-    height: 94px;
+.c-present-form-btn-cnr__image {
+    width: 260px;
+    height: 160px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.image-text {
-    font-family: Raleway;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 18px;
-    letter-spacing: 0em;  
+.image-sd {
+    background-image: url('../../assets/images/SD-kaart.png');
+}
+
+.image-mousepad {
+    background-image: url('../../assets/images/muismat.jpg');
+}
+
+.c-present-form-btn-cnr__text {
     margin: 0;
-    display: flex;
-    justify-content: center;
-    height: 20%;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 26px;
+    padding-top: 30px;
 }
 
-.present-notice {
-    font-family: Roboto;
-    font-size: 12px;
-    letter-spacing: 0em;
-    text-align: center;
-    width: 290px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+@media (min-width: 768px) {  
+    .c-present-form {
+        flex-direction: row;
+    }  
+
+    .c-present-form-btn {
+        margin: 0;
+    }
+    
+    .c-present-form-btn-cnr {
+        padding: 60px 40px;
+    }
+
+    .c-present-form-btn-cnr__image {
+        width: 250px;
+        height: 150px;
+    }
+
+    .c-present-content {
+        padding: 15px 30px;
+    }
+
+    .c-present-content__title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    
+    .c-present-content__text, .c-present-content__notice {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+@media (min-width: 992px) {  
+    .c-present-form-btn-cnr__image {
+        width: 300px;
+        height: 200px;
+    }
 }

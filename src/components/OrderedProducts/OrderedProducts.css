@@ -1,0 +1,91 @@
+.products {
+    margin: 81px auto 0 auto;
+    width: 90%;
+}
+
+.products-title {
+    font-family: Raleway, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 0;
+}
+
+.products-text {
+    font-family: Raleway, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 24px;
+    margin-top: 6px;
+
+}
+
+.product-link1 {
+    text-decoration: none;
+    color: black;
+    margin-right: 15px;
+}
+.product-link2 {
+    text-decoration: none;
+    color: black;
+}
+.product-link3 {
+    text-decoration: none;
+    color: black;
+    margin-right: 15px;
+}
+.product-link4 {
+    text-decoration: none;
+    color: black;
+}
+
+.product-container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap ;
+}
+
+.product-wrapper {
+    background-color: white;
+    width: 175px;
+    height: 161px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image1 {
+    width: 72px;
+    height: 142px;
+}
+.product-image2 {
+    width: 59px;
+    height: 145px;
+}
+.product-image3 {
+    width: 81px;
+    height: 143px;
+}
+.product-image4 {
+    width: 100px;
+    height: 122px; 
+}
+
+.product-image-title {
+    margin-top: 9px;
+    margin-bottom: 28px;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0em;
+}

@@ -4,9 +4,9 @@ import ScrollIndicator from '../../components/ScrollIndicator'
 export default function Header() {
 
     return (
-    <header className="header">
+    <header className="c-header">
         <ScrollIndicator />
-        <img className="image" src="/images/cadeautjes.png" alt="cadeautjes"/>
+        <img className="c-header__image" src="/images/cadeautjes.png" alt="cadeautjes"/>
     </header>
     )
 }
