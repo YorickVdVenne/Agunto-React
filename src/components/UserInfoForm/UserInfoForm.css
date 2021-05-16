@@ -1,0 +1,100 @@
+.userinfo {
+    margin: 81px auto 0 auto;
+    width: 90%;
+}
+
+form {
+    width: 100%;
+}
+
+.userinfo-title {
+    font-family: Raleway, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 0;
+}
+
+.userinfo-text {
+    font-family: Raleway, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 24px;
+
+}
+
+.input-full-length {
+    width: 100%;
+    height: 51px;
+}
+
+.input-street {
+    width: 257px;
+    height: 51px;
+    margin-right: 15px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.input-nr {
+    width: 90px;
+    height: 51px;
+    margin-bottom: 18px;
+}
+
+.input-country {
+    margin-bottom: 18px;
+    width: 100%;
+    height: 51px;
+}
+
+.input-zipcode {
+    margin-bottom: 18px;
+    width: 100%;
+    height: 51px;
+}
+
+.input-city {
+    margin-bottom: 18px;
+    width: 100%;
+    height: 51px;
+}
+
+.email-notice {
+    font-family: Roboto;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 5px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.userinfo-submit {
+    width: 100%;
+    height: 46px;
+    font-family: Raleway;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    background-color: #35E518;
+    border: none;
+    margin-bottom: 57px;
+    margin-top: 34px;
+}
