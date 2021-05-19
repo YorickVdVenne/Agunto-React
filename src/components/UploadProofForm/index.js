@@ -1,11 +1,24 @@
 import { useState } from 'react'
 import './UploadProofForm.css'
 
-export default function UploadProofForm() {
+export default function UploadProofForm(props) {
     const [file, setFile] = useState();
+    const [validationMessage, setValidationMessage] = useState(false);
+    console.log()
 
     function handleFile(e) {
         setFile(e.target.files[0])
+    }
+    function onClickHandler() {
+        console.log('hi!')
+        if(file) {
+
+            props.onChange(file)
+        } else {
+            return (
+                setValidationMessage(true)
+            )
+        }
     }
 
     return (
@@ -19,12 +32,15 @@ export default function UploadProofForm() {
                             <img className="upload-icon" src="/images/upload_icon.svg" alt="Upload"/>
                             <p className="upload-text">Upload screenshot klik hier</p>
                             <input className="upload-input" onChange={(event) => handleFile(event)} type="file" id="file" accept="image/*"/>
-                            <img className={`upload-check ${file ? 'active' : ''}`} src="/images/vinkje.png"/>
+                            <img className={`upload-check ${file ? 'active' : ''}`} src="/images/vinkje.png" alt='vinkje'/>
                         </div>
                     </label>
+                    {validationMessage ===  true && !file ? 
+                        <p className='upload-validation-text'>Vergeet niet je bewijs te uploaden!</p>
+                    : ''} 
                 </div>
                 <div className="finish">
-                    <button className="finish-btn">Ik wil mijn cadeautje ontvangen </button>
+                    <button onClick={() => onClickHandler()} className="finish-btn">Ik wil mijn cadeautje ontvangen </button>
                     <p className="finish-notice">
                         *Het ontvangen van het cadeautje is <strong>geheel kosteloos</strong>, enkel vragen wij u een review te plaatsen.
                     </p>

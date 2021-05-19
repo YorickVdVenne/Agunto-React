@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import './Main.css'
 
 import PresentForm from '../../components/PresentForm'
@@ -7,15 +7,16 @@ import OrderedProducts from '../../components/OrderedProducts'
 import UploadProofForm from '../../components/UploadProofForm'
 import SuccessPage from '../../pages/SuccessPage'
 
-export default function Main() {
+export default function Main(props) {
     const [present, setPresent] = useState()
     const [userInfo, setUserInfo] = useState()
     const [orderedProduct, setOrderedProduct] = useState()
     const [proof, setProof] = useState()
+    
+    if(present && userInfo && orderedProduct && proof) {
+        props.onSuccess(true)
+    }
 
-    useEffect(() => {
-        setProof()
-    }, [])
 
     return (
         <div className="main">
@@ -24,7 +25,7 @@ export default function Main() {
                     ? orderedProduct 
                         ? proof
                             ? <SuccessPage />
-                            : <UploadProofForm />
+                            : <UploadProofForm onChange={(value) => setProof(value)}/>
                         : <OrderedProducts onChange={(value) => setOrderedProduct(value)}/>
                     : <UserInfoForm onChange={(value) => setUserInfo(value)}/>
                 : <PresentForm onChange={(value) => setPresent(value)}/>
