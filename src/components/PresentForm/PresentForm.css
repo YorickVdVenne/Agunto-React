@@ -1,30 +1,43 @@
 .c-present {
-    width: 100%;
-    max-width: 1240px;
-    margin: 80px auto;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 70px;
     font-family: Raleway, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.c-present-content {
-    padding: 0 30px;
-}
-
 .c-present-content__title {
-    margin: 5px 0;
+    margin: 0px 0;
     font-size: 28px;
     font-weight: 800;
     line-height: 38px;
 }
 
-.c-present-content__text, .c-present-content__notice {
+.c-present-content__text {
+    font-family: Raleway;
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
+    font-style: normal;
     font-weight: 300;
-    line-height: 26px;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+.c-present-content__notice {
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .c-present-form {
-    padding: 15px 30px 0;
+    padding: 15px 0 8px;
     display: flex;
     flex-direction: column;
 }
@@ -34,6 +47,10 @@
     border: 10px solid #ffffff;
     max-width: 500px;
     margin: 15px 0;
+    width: 273px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
 }
 
 .c-present-form-btn:hover, .c-present-form-btn:focus{
@@ -42,8 +59,16 @@
     border: 10px solid #35E618;
 }
 
-.c-present-form-btn-cnr {
-    padding: 40px 20px;
+.c-present-form-btn-cnr1 {
+    padding: 31px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+.c-present-form-btn-cnr2 {
+    padding: 10px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,27 +86,53 @@
 
 .image-sd {
     background-image: url('../../assets/images/SD-kaart.png');
+    width: 126px;
+    height: 94px;
 }
 
 .image-mousepad {
     background-image: url('../../assets/images/muismat.jpg');
+    width: 148px;
+    height: 148px;
 }
 
-.c-present-form-btn-cnr__text {
+.c-present-form-btn-cnr__text1 {
     margin: 0;
-    font-size: 20px;
-    font-weight: 800;
-    line-height: 26px;
+    font-family: Raleway;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0em;
     padding-top: 30px;
+    
+}
+.c-present-form-btn-cnr__text2 {
+    margin: 0;
+    font-family: Raleway;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0em;
+    padding-top: 18px;
+    
 }
 
 @media (min-width: 768px) {  
+    .c-present {
+        margin: 185px auto 0 auto;
+    }
+
     .c-present-form {
         flex-direction: row;
     }  
 
     .c-present-form-btn {
         margin: 0;
+        margin-right: 15px;
+        width: 373px;
+        
     }
     
     .c-present-form-btn-cnr {
@@ -91,10 +142,6 @@
     .c-present-form-btn-cnr__image {
         width: 250px;
         height: 150px;
-    }
-
-    .c-present-content {
-        padding: 15px 30px;
     }
 
     .c-present-content__title {

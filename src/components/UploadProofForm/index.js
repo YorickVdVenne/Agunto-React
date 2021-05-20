@@ -10,7 +10,6 @@ export default function UploadProofForm(props) {
         setFile(e.target.files[0])
     }
     function onClickHandler() {
-        console.log('hi!')
         if(file) {
 
             props.onChange(file)
@@ -30,7 +29,7 @@ export default function UploadProofForm(props) {
                     <label for="file">
                         <div className="upload-wrapper">
                             <img className="upload-icon" src="/images/upload_icon.svg" alt="Upload"/>
-                            <p className="upload-text">Upload screenshot klik hier</p>
+                            <p className="upload-text"><strong>Upload screenshot</strong> klik hier</p>
                             <input className="upload-input" onChange={(event) => handleFile(event)} type="file" id="file" accept="image/*"/>
                             <img className={`upload-check ${file ? 'active' : ''}`} src="/images/vinkje.png" alt='vinkje'/>
                         </div>

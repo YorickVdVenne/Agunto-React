@@ -5,10 +5,25 @@
     top: 0;
 }
 
+.c-header-desktop {
+    width: 100%;
+    height: 128px;
+    position: fixed;
+    top: 0;
+    background-color: #E5E5E5;
+}
+
 .c-header__image {
     width: 163px;
     height: 145px;
     position: relative;
     float: right;
     transform: translate(37px, -25px);
+}
+.c-header__image-desktop {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    float: right;
+    transform: translate(100px, -185px);
 }

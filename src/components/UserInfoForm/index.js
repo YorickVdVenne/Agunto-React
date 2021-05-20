@@ -9,7 +9,7 @@ export default function UserInfoForm(props) {
     }
 
     return (
-        <div className="userinfo">
+        <section className="userinfo">
             <h1 className="userinfo-title"><strong>Waar kunnen wij het cadeautje naar toe sturen?*</strong></h1>
             <p className="userinfo-text">
                 Graag ontvangen wij je adresgegevens om het cadeautje naar toe te sturen. 
@@ -43,10 +43,10 @@ export default function UserInfoForm(props) {
 
                 <p className="email-notice">Via dit e-mailadres houden we je op de hoogte van de voortgang van je bestelling</p>
 
-                <input className="userinfo-submit" type="submit" value="Volgende stap"/>
+                <input className="userinfo-submit" type="submit" value={`${props.device === 'desktop' ? 'Controleer gegevens' : 'Volgende stap'}`}/>
             </form>
             
 
-        </div>
+        </section>
     )
 }

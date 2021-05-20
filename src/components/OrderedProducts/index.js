@@ -7,7 +7,7 @@ export default function OrderedProducts(props) {
     }
 
     return (
-        <div className="products">
+        <section className="products">
             <h1 className="products-title"><strong>Welk product heb je bij ons besteld?*</strong></h1>
             <p className="products-text">
                 Let op, als je het desbetreffende product aanklinkt, opent er een nieuw tabblad dat de mogelijkheid geeft 
@@ -40,6 +40,6 @@ export default function OrderedProducts(props) {
                     <p className="product-image-title">Bureaulamp</p>
                 </a>
             </div>
-        </div>
+        </section>
     )
 }

@@ -1,5 +1,5 @@
 .userinfo {
-    margin: 81px auto 0 auto;
+    margin: 70px auto 0 auto;
     width: 90%;
 }
 
@@ -14,7 +14,7 @@ form {
     font-weight: 200;
     line-height: 35px;
     letter-spacing: 0em;
-    text-align: center;
+    text-align: left;
     margin: 0;
 }
 
@@ -25,28 +25,51 @@ form {
     font-weight: 300;
     line-height: 18px;
     letter-spacing: 0em;
-    text-align: center;
+    text-align: left;
     margin-bottom: 24px;
 
+}
+
+input, select {
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid #C2C2C2;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	-moz-box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-box-shadow: 1px 1px 4px #EBEBEB;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	padding: 7px;
+	outline: none;
+  }
+input:focus, select:focus {
+    border: 1px solid #215CA3;
 }
 
 .input-full-length {
     width: 100%;
     height: 51px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
 }
 
 .input-street {
-    width: 257px;
+    width: 73%;
     height: 51px;
-    margin-right: 15px;
+    margin-right: 0;
     margin-top: 18px;
     margin-bottom: 18px;
 }
 
 .input-nr {
-    width: 90px;
     height: 51px;
     margin-bottom: 18px;
+    float: right;
+    width: 25%;
+    margin-top: 18px;
 }
 
 .input-country {
@@ -57,14 +80,15 @@ form {
 
 .input-zipcode {
     margin-bottom: 18px;
-    width: 100%;
+    width: 53%;
     height: 51px;
 }
 
 .input-city {
     margin-bottom: 18px;
-    width: 100%;
+    width: 45%;
     height: 51px;
+    float: right;
 }
 
 .email-notice {
@@ -74,7 +98,7 @@ form {
     font-weight: 300;
     line-height: 12px;
     letter-spacing: 0em;
-    text-align: center;
+    text-align: left;
     margin-top: 5px;
     width: 100%;
     display: block;
@@ -95,6 +119,12 @@ form {
     color: white;
     background-color: #35E518;
     border: none;
-    margin-bottom: 57px;
-    margin-top: 34px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) { 
+    .input-street {
+        width: 73%;
+    }
 }
