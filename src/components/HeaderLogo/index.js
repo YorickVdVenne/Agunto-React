@@ -1,3 +1,4 @@
+import React from 'react';
 import './HeaderLogo.css'
 
 export default function HeaderLogo() {

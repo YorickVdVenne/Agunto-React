@@ -1,3 +1,4 @@
+import React from 'react';
 import './ScrollIndicator.css'
 
 export default function ScrollIndicator(props) {

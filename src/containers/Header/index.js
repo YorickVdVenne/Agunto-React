@@ -1,3 +1,4 @@
+import React from 'react';
 import './Header.css'
 import ScrollIndicator from '../../components/ScrollIndicator'
 import HeaderLogo from '../../components/HeaderLogo'

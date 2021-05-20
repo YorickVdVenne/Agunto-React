@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import Header from '../../containers/Header';
 import Main from '../../containers/Main';

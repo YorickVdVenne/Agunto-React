@@ -1,10 +1,13 @@
+import React from 'react';
 import './OrderedProducts.css'
+import Carousel from 'react-elastic-carousel'
 
 export default function OrderedProducts(props) {
 
     function onClickHandler(value) {
         props.onChange(value)
     }
+    const toShow = props.device === 'desktop' ? 3 : 1
 
     return (
         <section className="products">
@@ -14,7 +17,30 @@ export default function OrderedProducts(props) {
                 een review te schrijven. Dit is echter nodig om het cadeau te ontvangen. <u><strong>Sluit deze pagina niet! </strong></u>
                 Als laatste stap dien je namelijk nog de screenshot te uploaden. Klik daarna op de groene knop :)
             </p>
-            <div className="product-container">
+            <Carousel itemsToShow={toShow}>
+                <div key={1}>
+                    <img src="/images/ontpluizer.jpg" alt="Ontpluizer"/>
+                </div>
+                <div key={2}>
+                    <img src="/images/kattenverjager.jpg" alt="Kattenverjager"/>
+                </div>
+                <div key={3}>
+                    <img src="/images/kattenverjager2.jpg" alt="Kattenverjager"/>
+                </div>
+                <div key={4}>
+                    <img src="/images/hondenriem.jpg" alt="Hondenriem"/>
+                </div>
+                <div key={5}>
+                    <img src="/images/bureaulamp.jpg" alt="Bureaulamp"/>
+                </div>
+                <div key={6}>
+                    <img src="/images/energiemeter.jpg" alt="Energiemeter"/>
+                </div>
+                <div key={7}>
+                    <img src="/images/buitencamera.jpg" alt="Buitencamera"/>
+                </div>
+            </Carousel>
+            {/* <div className="product-container">
                 <a className="product-link1" onClick={() => onClickHandler('Ontpluizer')} target="_blank" rel="noreferrer" href="https://www.bol.com/nl/service/schrijf-een-review.html?global_id=9300000035087666">
                     <div className="product-wrapper">
                         <img className="product-image1" src="/images/product1.jpg" alt=""/>
@@ -39,7 +65,7 @@ export default function OrderedProducts(props) {
                     </div>
                     <p className="product-image-title">Bureaulamp</p>
                 </a>
-            </div>
+            </div> */}
         </section>
     )
 }
