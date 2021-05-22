@@ -5,7 +5,6 @@ import './UploadProofForm.css'
 export default function UploadProofForm(props) {
     const [file, setFile] = useState();
     const [validationMessage, setValidationMessage] = useState(false);
-    console.log()
 
     function handleFile(e) {
         setFile(e.target.files[0])

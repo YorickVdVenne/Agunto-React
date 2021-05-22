@@ -16,7 +16,7 @@ export default function Header(props) {
                 </header>
             :
                 <header className="c-header">
-                    <ScrollIndicator />
+                    <ScrollIndicator currentStep={props.step}/>
                     <img className="c-header__image" src="/images/cadeautjes.png" alt="cadeautjes"/>
                 </header>
         }

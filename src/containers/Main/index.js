@@ -16,8 +16,8 @@ export default function Main(props) {
     console.log(present, userInfo, orderedProduct, proof)
 
     useEffect(() => {
-        if(present && userInfo === null) { props.step('userInfo') }
-        if(present && userInfo && orderedProduct === null) { props.step('orderedProducts')}
+        if(present && !userInfo) { props.step('userInfo') }
+        if(present && userInfo && !orderedProduct) { props.step('orderedProducts')}
         if(present && userInfo && orderedProduct) { props.step('uploadProof')}
 
     }, [present,userInfo, orderedProduct, proof])
