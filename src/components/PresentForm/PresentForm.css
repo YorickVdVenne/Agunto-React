@@ -53,9 +53,13 @@
     background-color: white;
 }
 
-.c-present-form-btn:hover, .c-present-form-btn:focus{
+.c-present-form-btn:hover, .c-present-form-btn:focus {
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    border: 10px solid #35E618;
+}
+.c-present-form-btn.active {
+    cursor: default;
     border: 10px solid #35E618;
 }
 

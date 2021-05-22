@@ -1,9 +1,19 @@
 import React from 'react';
 import './PresentForm.css'
+import { useState } from 'react'
 
 export default function PresentForm(props) {
+    const [sdActive, setSdActive] = useState(false)
+    const [mousepadActive, setMousepadActive] = useState(false)
 
     function onClickHandler(value) {
+        if(value === 'SD-kaart') {
+            setMousepadActive(false)
+            setSdActive(true)
+        } else if(value === 'Muismat') {
+            setSdActive(false)
+            setMousepadActive(true)
+        }
         props.onChange(value)
     }
 
@@ -15,14 +25,14 @@ export default function PresentForm(props) {
             </div>
 
             <div className="c-present-form">
-                <button className="c-present-form-btn" onClick={() => onClickHandler('SD-kaart')}>
+                <button className={`c-present-form-btn ${sdActive ? 'active' : ''}`} onClick={() => onClickHandler('SD-kaart')}>
                     <div className="c-present-form-btn-cnr1">
                         <div className="c-present-form-btn-cnr__image image-sd"></div>
                         <p className="c-present-form-btn-cnr__text1">16 GB SD-kaart</p>
                     </div>
                 </button>
 
-                <button className="c-present-form-btn" onClick={() => onClickHandler('Muismat')}>
+                <button className={`c-present-form-btn ${mousepadActive ? 'active' : ''}`} onClick={() => onClickHandler('Muismat')}>
                     <div className="c-present-form-btn-cnr2">
                         <div className="c-present-form-btn-cnr__image image-mousepad"></div>
                         <p className="c-present-form-btn-cnr__text2">Ergonomische muismat</p>

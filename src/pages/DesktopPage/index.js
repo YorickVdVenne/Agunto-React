@@ -6,6 +6,7 @@ import './DesktopPage.css';
 
 export default function DesktopPage(props) {
     const [formData, setFormData] = useState()
+    const [currentStep, setCurrentStep] = useState()
 
     if(formData) {
         console.log('checking form data... sending mail!')
@@ -18,8 +19,12 @@ export default function DesktopPage(props) {
 
     return (
         <div className="desktop">
-            <Header device='desktop'/>
-            <Main device='desktop' onSubmit={(data) => setFormData(data)}/>
+            <Header step={currentStep} device='desktop'/>
+            <Main 
+                device='desktop' 
+                onSubmit={(data) => setFormData(data)}
+                step={(step) => setCurrentStep(step)}
+            />
         </div>
     )
 }
