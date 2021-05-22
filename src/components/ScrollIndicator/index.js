@@ -5,8 +5,7 @@ export default function ScrollIndicator(props) {
 
     if(props.device === 'desktop') {
         window.onscroll = () => changeProgressBar();
-    }
-
+    } 
 
     function changeProgressBar() {
         var winScroll = document.body.scrollTop || document.documentElement.scrollTop;

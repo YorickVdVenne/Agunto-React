@@ -3,6 +3,7 @@
     height: 80px;
     position: fixed;
     top: 0;
+    z-index: 9999;
 }
 
 .c-header-desktop {
@@ -11,6 +12,7 @@
     position: fixed;
     top: 0;
     background-color: #E5E5E5;
+    z-index: 9999;
 }
 
 .c-header__image {

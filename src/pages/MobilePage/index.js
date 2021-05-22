@@ -10,6 +10,10 @@ export default function MobilePage(props) {
 
     if(formData) {
         console.log('checking form data... sending mail!')
+
+        // Email functionality
+
+        // if mail successfully sends, set onSuccess prop to true
         props.onSuccess(true)
     }
 
