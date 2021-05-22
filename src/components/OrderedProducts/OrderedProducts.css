@@ -90,6 +90,20 @@
     letter-spacing: 0em;
 }
 
+/* round buttons on hover */
+.rec.rec-arrow:hover:enabled, .rec.rec.rec-arrow:focus {
+    background-color: #215CA3;
+}
+
+.rec.rec-dot_active {
+    background-color: rgb(33, 92, 163, .5);
+    box-shadow: 0 0 1px 3px #215CA3;
+}
+
+.rec.rec-dot:hover,  .rec.rec-dot:focus{
+    box-shadow: 0 0 1px 3px #215CA3;
+}
+
 @media (min-width: 768px) { 
     .products {
         margin-top: 40px;

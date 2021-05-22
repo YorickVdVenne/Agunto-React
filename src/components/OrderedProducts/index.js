@@ -7,7 +7,6 @@ export default function OrderedProducts(props) {
     function onClickHandler(value) {
         props.onChange(value)
     }
-    const toShow = props.device === 'desktop' ? 3 : 1
 
     return (
         <section className="products">
@@ -17,27 +16,41 @@ export default function OrderedProducts(props) {
                 een review te schrijven. Dit is echter nodig om het cadeau te ontvangen. <u><strong>Sluit deze pagina niet! </strong></u>
                 Als laatste stap dien je namelijk nog de screenshot te uploaden. Klik daarna op de groene knop :)
             </p>
-            <Carousel itemsToShow={toShow}>
+            <Carousel itemsToShow={props.device === 'desktop' ? 3 : 1}>
                 <div key={1}>
-                    <img src="/images/ontpluizer.jpg" alt="Ontpluizer"/>
+                    <a target="_blank" href="https://www.bol.com/nl/service/schrijf-een-review.html?global_id=9300000035087666">
+                        <img src="/images/ontpluizer.jpg" alt="Ontpluizer"/>
+                    </a>
                 </div>
                 <div key={2}>
-                    <img src="/images/kattenverjager.jpg" alt="Kattenverjager"/>
+                    <a target="_blank" href="https://www.bol.com/nl/service/schrijf-een-review.html?global_id=9300000038002255">
+                        <img src="/images/kattenverjager.jpg" alt="Kattenverjager"/>
+                    </a>
                 </div>
                 <div key={3}>
-                    <img src="/images/kattenverjager2.jpg" alt="Kattenverjager"/>
+                    <a target="_blank" href="https://www.bol.com/nl/service/schrijf-een-review.html?global_id=9300000037303545">
+                        <img src="/images/kattenverjager2.jpg" alt="Kattenverjager"/>
+                    </a>
                 </div>
                 <div key={4}>
-                    <img src="/images/hondenriem.jpg" alt="Hondenriem"/>
+                    <a target="_blank" href="https://www.bol.com/nl/service/schrijf-een-review.html?global_id=9300000039107308">
+                        <img src="/images/hondenriem.jpg" alt="Hondenriem"/>
+                    </a>
                 </div>
                 <div key={5}>
-                    <img src="/images/bureaulamp.jpg" alt="Bureaulamp"/>
+                    <a target="_blank" href="https://www.bol.com/nl/service/schrijf-een-review.html?global_id=9300000021622443">
+                        <img src="/images/bureaulamp.jpg" alt="Bureaulamp"/>
+                    </a>
                 </div>
                 <div key={6}>
-                    <img src="/images/energiemeter.jpg" alt="Energiemeter"/>
+                    <a target="_blank" href="https://www.bol.com/nl/service/schrijf-een-review.html?global_id=9300000019386319">
+                        <img src="/images/energiemeter.jpg" alt="Energiemeter"/>
+                    </a>
                 </div>
                 <div key={7}>
-                    <img src="/images/buitencamera.jpg" alt="Buitencamera"/>
+                    <a target="_blank" href="https://www.bol.com/nl/service/schrijf-een-review.html?global_id=9300000011448093">
+                        <img src="/images/buitencamera.jpg" alt="Buitencamera"/>
+                    </a>
                 </div>
             </Carousel>
             {/* <div className="product-container">
