@@ -17,30 +17,44 @@ export default function UserInfoForm(props) {
                 <strong> Let op: Wij versturen pas na het indienen van bewijs van review</strong>
             </p>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input className="input-full-length" type="text" placeholder="Naam*" {...register("name", { required: true, maxLength: 64 })}/>
-                {errors.name && "Naam is vereist!"}
+                <input className={`input-full-length ${errors.name && 'invalid'}`} type="text" placeholder="Naam*" {...register("name", { required: true, maxLength: 64 })}/>
+                {errors.name && (
+                    <span className='validation-text' role="alert">Naam is vereist! <br/></span>
+                )}
 
-                <input className="input-street" type="text" placeholder="Straat*" {...register("street", { required: true, maxLength: 64 })}/>
-                {errors.street && "Straat is vereist!"}
+                <input className={`input-street ${errors.street && 'invalid'}`} type="text" placeholder="Straat*" {...register("street", { required: true, maxLength: 64 })}/>
 
-                <input className="input-nr" type="text" placeholder="Nr. + Toev*" {...register("nr", { required: true , maxLength: 255})}/>
-                {errors.nr && "Huisnummer is vereist!"}
+                <input className={`input-nr ${errors.nr && 'invalid'}`} type="text" placeholder="Nr. + Toev*" {...register("nr", { required: true , maxLength: 255})}/>
+                {errors.street && (
+                    <span className='validation-text' role="alert">Straat is vereist!</span>
+                )}
+                {errors.nr && (
+                    <span className='validation-text nr' role="alert">Huisnummer is vereist! <br/></span>
+                )}
 
-                <select className="input-country" {...register("country", { required: true })}>
+                <select className={`input-country ${errors.country && 'invalid'}`} {...register("country", { required: true })}>
                     <option value="nl">Nederland</option>
                     <option value="be">België</option>
                     <option value="de">Deutschland</option>
                 </select>
-                {errors.country && "Land is vereist!"}
+                {errors.country && (
+                    <span className='validation-text' role="alert">Land is vereist! <br/></span>
+                )}
 
-                <input className="input-zipcode" type="text" placeholder="Postcode*" {...register("zipcode", { required: true, maxLength: 10 })}/>
-                {errors.zipcode && "Postcode is vereist!"}
+                <input className={`input-zipcode ${errors.zipcode && 'invalid'}`} type="text" placeholder="Postcode*" {...register("zipcode", { required: true, maxLength: 10 })}/>
 
-                <input className="input-city" type="text" placeholder="Plaats*" {...register("city", { required: true, maxLength: 64 })}/>
-                {errors.city && "Plaats is vereist!"}
+                <input className={`input-city ${errors.city && 'invalid'}`} type="text" placeholder="Plaats*" {...register("city", { required: true, maxLength: 64 })}/>
+                {errors.zipcode && (
+                    <span className='validation-text' role="alert">Postcode is vereist!</span>
+                )}
+                {errors.city && (
+                    <span className='validation-text city' role="alert">Plaats is vereist!</span>
+                )}
 
-                <input className="input-full-length" type="email" placeholder="E-mailadres*" {...register("email", { required: true, maxLength: 64 })}/>
-                {errors.email && "E-mailadres is vereist!"}
+                <input className={`input-full-length ${errors.email && 'invalid'}`} type="email" placeholder="E-mailadres*" {...register("email", { required: true, maxLength: 64 })}/>
+                {errors.email && (
+                    <span className='validation-text' role="alert">E-mailadres is vereist! <br/></span>
+                )}
 
                 <p className="email-notice">Via dit e-mailadres houden we je op de hoogte van de voortgang van je bestelling</p>
 
