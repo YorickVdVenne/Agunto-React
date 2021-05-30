@@ -40,6 +40,7 @@ export default function PresentForm(props) {
                 </button>
             </div>
             <div className="c-present-content"> 
+                <p className="c-present-content__warning">{props.device === 'desktop' ? props.validation ? 'Selecteer het gewilde cadeau' : '' : ''}</p>
                 <p className="c-present-content__notice">*Het ontvangen van het cadeautje is <strong>geheel kosteloos</strong>, enkel vragen wij u een review te plaatsen.</p>
             </div>
         </section>

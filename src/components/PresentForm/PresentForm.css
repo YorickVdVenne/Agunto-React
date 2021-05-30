@@ -157,6 +157,14 @@
         font-size: 20px;
         line-height: 26px;
     }
+
+    .c-present-content__warning {
+        font-family: Roboto;
+        text-align: left;
+        font-size: 20px;
+        line-height: 26px;
+        color: red;
+    }
 }
 
 @media (min-width: 992px) {  

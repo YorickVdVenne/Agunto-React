@@ -146,4 +146,20 @@ input.invalid:focus, select.invalid:focus {
     .input-street {
         width: 73%;
     }
+
+    .form-complete {
+        font-family: Roboto;
+        text-align: left;
+        font-size: 20px;
+        line-height: 26px;
+        color: #35E518;
+    }
+
+    .form-warning {
+        font-family: Roboto;
+        text-align: left;
+        font-size: 20px;
+        line-height: 26px;
+        color: red;
+    }
 }

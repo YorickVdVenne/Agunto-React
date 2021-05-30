@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
 import './Main.css'
-import base64url from "base64url";
 
 import PresentForm from '../../components/PresentForm'
 import UserInfoForm from '../../components/UserInfoForm'
@@ -30,8 +29,13 @@ export default function Main(props) {
         } else if(!userInfo) {
             alert('Vergeet niet je gegevens in te vullen!')
             setUserInfoValidation(true)
+            setPresentValidation(false)
         } else if(image) {
+            setPresentValidation(false)
+            setUserInfoValidation(false)
             sendMail(image)
+        } else {
+            alert('Iets ging verkeerd, probeer het opnieuw door de pagina te resetten.')
         }
     }
 
@@ -43,12 +47,10 @@ export default function Main(props) {
             const product = orderedProduct ? orderedProduct : 'Not Selected';
 
             window.Email.send({
-                Host : "smtp.mailtrap.io",
-                Username : "6e74a216ee4b45",
-                Password : "21ca88348a5097",
-                To : 'yorick.vd.venne@hotmail.nl',
+                SecureToken: 'e1befbde-e493-4a94-aeab-c1cd3081f261',
+                To : 'reviews@homevitaal.nl',
                 From : userInfo.email,
-                Subject : 'Product review from' + userInfo.name,
+                Subject : 'Product review from ' + userInfo.name,
                 Body : "<html>Mail from: <strong>" + userInfo.name + "</strong><br/>" +
                 "Selected gift: " + present + "<br/>" +
                 "Reviewed Product: " + product + "<br/>" +
@@ -72,11 +74,8 @@ export default function Main(props) {
             );
         }
         reader.onerror = function() {
-            console.log('there are some problems');
+            console.log('Something went wrong...');
         };
-
-        //if mail success:
-        // props.success(true)
     }
 
     return (
@@ -84,8 +83,8 @@ export default function Main(props) {
             {props.device === 'desktop' 
                 ?
                     <>
-                        <PresentForm device='desktop' onChange={(value) => setPresent(value)}/>
-                        <UserInfoForm device='desktop' onChange={(value) => setUserInfo(value)}/>
+                        <PresentForm validation={presentValidation} device='desktop' onChange={(value) => setPresent(value)}/>
+                        <UserInfoForm validation={userInfoValidation} device='desktop' onChange={(value) => setUserInfo(value)}/>
                         <OrderedProducts device='desktop' onChange={(value) => setOrderedProduct(value)}/>
                         <UploadProofForm device='desktop' onChange={(value) => setProof(value)} submitMail={(proofImage) => checkAllInputs(proofImage)}/>
                     </>
@@ -94,7 +93,7 @@ export default function Main(props) {
                         ? orderedProduct 
                             ? proof
                                 ? 'laden...'
-                                : <UploadProofForm onChange={(value) => setProof(value)}/>
+                                : <UploadProofForm onChange={(value) => setProof(value)} submitMail={(proofImage) => checkAllInputs(proofImage)}/>
                             : <OrderedProducts onChange={(value) => setOrderedProduct(value)}/>
                         : <UserInfoForm onChange={(value) => setUserInfo(value)}/>
                     : <PresentForm onChange={(value) => setPresent(value)}/>

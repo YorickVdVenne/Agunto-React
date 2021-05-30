@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './UserInfoForm.css'
 import { useForm } from "react-hook-form";
 
 export default function UserInfoForm(props) {
     const { register, formState: { errors }, handleSubmit } = useForm();
+    const [onSuccess, setOnSuccess] = useState()
 
     const onSubmit = (data) => {
         props.onChange(data)
+        setOnSuccess(true)
     }
 
     return (
@@ -33,9 +35,9 @@ export default function UserInfoForm(props) {
                 )}
 
                 <select className={`input-country ${errors.country && 'invalid'}`} {...register("country", { required: true })}>
-                    <option value="nl">Nederland</option>
-                    <option value="be">België</option>
-                    <option value="de">Deutschland</option>
+                    <option value="NL">Nederland</option>
+                    <option value="BE">België</option>
+                    <option value="DE">Deutschland</option>
                 </select>
                 {errors.country && (
                     <span className='validation-text' role="alert">Land is vereist! <br/></span>
@@ -57,7 +59,14 @@ export default function UserInfoForm(props) {
                 )}
 
                 <p className="email-notice">Via dit e-mailadres houden we je op de hoogte van de voortgang van je bestelling</p>
-
+                {props.device === 'desktop' 
+                    ? onSuccess 
+                        ? <p className='form-complete'>Je gegevens zijn compleet!</p> 
+                        : props.validation 
+                            ? <p className='form-warning'>Vul de bovenstaande velden in!</p> 
+                            : '' 
+                    : ''
+                }
                 <input className="userinfo-submit" type="submit" value={`${props.device === 'desktop' ? 'Controleer gegevens' : 'Volgende stap'}`}/>
             </form>
             
