@@ -1,6 +1,6 @@
 .products {
     margin: 81px auto 0 auto;
-    width: 90%;
+    width: 80%;
 }
 
 .products-title {
@@ -96,12 +96,12 @@
 }
 
 .rec.rec-dot_active {
-    background-color: rgb(33, 92, 163, .5);
-    box-shadow: 0 0 1px 3px #215CA3;
+    background-color: #A1A1A1;
+    box-shadow: 0 0 1px 3px #A1A1A1;
 }
 
 .rec.rec-dot:hover,  .rec.rec-dot:focus{
-    box-shadow: 0 0 1px 3px #215CA3;
+    box-shadow: 0 0 1px 3px #A1A1A1;
 }
 
 @media (min-width: 769px) { 

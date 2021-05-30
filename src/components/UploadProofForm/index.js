@@ -11,8 +11,8 @@ export default function UploadProofForm(props) {
     }
     function onClickHandler() {
         if(file) {
-
-            props.onChange(file)
+           props.onChange(file)
+           props.submitMail(file)
         } else {
             return (
                 setValidationMessage(true)

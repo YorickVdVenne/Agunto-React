@@ -1,6 +1,6 @@
 .userinfo {
     margin: 70px auto 0 auto;
-    width: 90%;
+    width: 80%;
 }
 
 form {
@@ -27,6 +27,7 @@ form {
     letter-spacing: 0em;
     text-align: left;
     margin-bottom: 6px;
+    margin-top: 6px
 
 }
 

@@ -1,6 +1,6 @@
 .proof {
     margin: 81px auto 0 auto;
-    width: 90%;
+    width: 80%;
 }
 .proof-container {
     height: 85vh;
@@ -123,6 +123,13 @@
     .upload-icon {
         width: 104px;
         height: 104px;
+        margin-left: 0;
+    }
+
+    .upload-check.active {
+        width: 49px;
+        height: 49px;
+        margin-right: 0;
     }
 
     .finish-notice {
