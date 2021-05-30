@@ -23,12 +23,12 @@ export default function OrderedProducts(props) {
                     </a>
                 </div>
                 <div key={2}>
-                    <a onClick={() => onClickHandler('Kattenverjager')} rel="noreferrer" target="_blank" href="https://www.bol.com/nl/service/schrijf-een-review.html?global_id=9300000038002255">
+                    <a onClick={() => onClickHandler('Kattenverjager 1')} rel="noreferrer" target="_blank" href="https://www.bol.com/nl/service/schrijf-een-review.html?global_id=9300000038002255">
                         <img src="/images/kattenverjager.jpg" alt="Kattenverjager"/>
                     </a>
                 </div>
                 <div key={3}>
-                    <a onClick={() => onClickHandler('Kattenverjager')} rel="noreferrer" target="_blank" href="https://www.bol.com/nl/service/schrijf-een-review.html?global_id=9300000037303545">
+                    <a onClick={() => onClickHandler('Kattenverjager 2')} rel="noreferrer" target="_blank" href="https://www.bol.com/nl/service/schrijf-een-review.html?global_id=9300000037303545">
                         <img src="/images/kattenverjager2.jpg" alt="Kattenverjager"/>
                     </a>
                 </div>
