@@ -5,7 +5,7 @@ import Carousel from 'react-elastic-carousel'
 export default function OrderedProducts(props) {
 
     function onClickHandler(value) {
-        props.onChange(value)
+        setTimeout(() => { props.onChange(value) }, 300);
     }
 
     return (

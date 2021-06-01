@@ -12,7 +12,7 @@ export default function UploadProofForm(props) {
     function onClickHandler() {
         if(file) {
            props.onChange(file)
-           props.submitMail(file)
+           setTimeout(() => {  props.submitMail(file) }, 300);
         } else {
             return (
                 setValidationMessage(true)

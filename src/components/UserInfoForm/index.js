@@ -7,8 +7,8 @@ export default function UserInfoForm(props) {
     const [onSuccess, setOnSuccess] = useState()
 
     const onSubmit = (data) => {
-        props.onChange(data)
         setOnSuccess(true)
+        setTimeout(() => { props.onChange(data) }, 300);
     }
 
     return (
@@ -63,7 +63,7 @@ export default function UserInfoForm(props) {
                     ? onSuccess 
                         ? <p className='form-complete'>Je gegevens zijn compleet!</p> 
                         : props.validation 
-                            ? <p className='form-warning'>Vul de bovenstaande velden in!</p> 
+                            ? <p className='form-warning'>Vergeet niet je gegevens in te vullen!</p> 
                             : '' 
                     : ''
                 }

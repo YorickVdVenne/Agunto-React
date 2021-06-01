@@ -24,10 +24,10 @@ export default function Main(props) {
 
     function checkAllInputs(image) {
         if(!present) {
-            alert('Vergeet niet een cadeau te selecteren!')
+            window.scrollTo({top: 0, behavior: 'smooth'}); 
             setPresentValidation(true)
         } else if(!userInfo) {
-            alert('Vergeet niet je gegevens in te vullen!')
+            window.scrollTo({top: 500, behavior: 'smooth'}); 
             setUserInfoValidation(true)
             setPresentValidation(false)
         } else if(image) {
@@ -45,22 +45,22 @@ export default function Main(props) {
         reader.onload = function() {
             const dataUri = "data:" + image.type + ";base64," + btoa(reader.result);
             const product = orderedProduct ? orderedProduct : 'Not Selected';
-
+            props.success(true)
             window.Email.send({
                 SecureToken: 'e1befbde-e493-4a94-aeab-c1cd3081f261',
                 To : 'reviews@homevitaal.nl',
                 From : userInfo.email,
                 Subject : 'Product review from ' + userInfo.name,
-                Body : "<html>Mail from: <strong>" + userInfo.name + "</strong><br/>" +
-                "Selected gift: " + present + "<br/>" +
-                "Reviewed Product: " + product + "<br/>" +
-                "Street: " + userInfo.street + "<br/>" +
-                "Housenumber: " + userInfo.nr + "<br/>" +
-                "Country: " + userInfo.country + "<br/>" +
-                "Zipcode: " + userInfo.zipcode + "<br/>" +
-                "City: " + userInfo.city + "<br/>" +
+                Body : "<html>Mail van: <strong>" + userInfo.name + "</strong><br/>" +
+                "Geselecteerde Cadeau: " + present + "<br/>" +
+                "Beoordeeld product: " + product + "<br/>" +
+                "Straat: " + userInfo.street + "<br/>" +
+                "Huisnummer: " + userInfo.nr + "<br/>" +
+                "Land: " + userInfo.country + "<br/>" +
+                "Postcode: " + userInfo.zipcode + "<br/>" +
+                "Plaats: " + userInfo.city + "<br/>" +
                 "Email: " + userInfo.email + "<br/><br/>" + 
-                "Check out the attachment for the proof of review" +
+                "Zie attachment voor bewijsmateriaal." +
                 "</html>",
                 Attachments : [
                     {
